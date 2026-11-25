@@ -1,5 +1,5 @@
 # One Dockerfile for every service: docker build --build-arg SERVICE=orders .
-FROM golang:1.24-alpine AS build
+FROM golang:1.26-alpine AS build
 ARG SERVICE
 WORKDIR /src
 COPY go.mod go.sum ./
