@@ -1,7 +1,6 @@
 # go-microservices-kit
 
 [![ci](https://github.com/shani8615/go-microservices-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/shani8615/go-microservices-kit/actions/workflows/ci.yml)
-[![Go Report Card](https://goreportcard.com/badge/github.com/shani8615/go-microservices-kit)](https://goreportcard.com/report/github.com/shani8615/go-microservices-kit)
 [![Release](https://img.shields.io/github/v/release/shani8615/go-microservices-kit?sort=semver)](https://github.com/shani8615/go-microservices-kit/releases)
 [![Go version](https://img.shields.io/github/go-mod/go-version/shani8615/go-microservices-kit)](go.mod)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
