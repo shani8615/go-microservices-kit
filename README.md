@@ -1,6 +1,10 @@
 # go-microservices-kit
 
 [![ci](https://github.com/shani8615/go-microservices-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/shani8615/go-microservices-kit/actions/workflows/ci.yml)
+[![Go Report Card](https://goreportcard.com/badge/github.com/shani8615/go-microservices-kit)](https://goreportcard.com/report/github.com/shani8615/go-microservices-kit)
+[![Release](https://img.shields.io/github/v/release/shani8615/go-microservices-kit?sort=semver)](https://github.com/shani8615/go-microservices-kit/releases)
+[![Go version](https://img.shields.io/github/go-mod/go-version/shani8615/go-microservices-kit)](go.mod)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 A small but realistic **Go microservices reference**: an API gateway, auth, orders and notifications. Each service has its own Postgres database, and they share events over NATS JetStream through a **transactional outbox**. It aims to show the patterns that matter in production, not to cover every feature.
 
@@ -76,6 +80,10 @@ Each service's tests run against in-memory stores, so `go test ./...` needs no D
 - Add OpenTelemetry tracing (propagate `traceparent` through outbox headers) and Prometheus metrics.
 - Use versioned migrations (goose / atlas) instead of `CREATE TABLE IF NOT EXISTS` at startup.
 - Add Kubernetes manifests / Helm chart.
+
+## Why this instead of a framework?
+
+Frameworks like go-kit, go-micro and Kratos give you a lot of structure up front. This kit is the opposite: **plain `net/http`, `database/sql` and a few small libraries**, wired together so you can see every pattern and copy only what you need. Use it as a reference, a starting point for a new service, or as working examples of transactional outboxes, idempotent APIs and resilient gateways in Go.
 
 ## License
 
