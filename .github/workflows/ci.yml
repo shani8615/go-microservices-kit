@@ -11,8 +11,6 @@ jobs:
       - uses: actions/setup-go@v5
         with:
           go-version: "1.26"
-      # go.sum is generated here until it is committed (run `make tidy` locally and commit it).
-      - run: go mod tidy
       - run: go mod verify
       - run: go vet ./...
       - run: go test -race -cover ./...
@@ -29,5 +27,4 @@ jobs:
       - uses: actions/setup-go@v5
         with:
           go-version: "1.26"
-      - run: go mod tidy
       - run: docker build --build-arg SERVICE=${{ matrix.service }} -t kit-${{ matrix.service }} .
